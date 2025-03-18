@@ -62,10 +62,11 @@ jobs:
     needs: build
     steps:
       - name: Download artifact  
-        uses: actions/download-artifact@v3  
+        uses: actions/download-artifact@v4  
         with:  
-          name: github-pages  
+          pattern: github-pages  
           path: ./_site  
+    
 
       - name: Deploy to GitHub Pages  
         id: deployment  
